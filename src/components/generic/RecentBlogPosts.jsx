@@ -3,6 +3,7 @@ import { getCollection } from "astro:content";
 // import { Card } from '@eliancodes/brutal-UI'; // Assuming Brutal UI components are accessible
 // import { Button } from '@eliancodes/brutal-UI';
 import BlogList from '@components/blog/BlogList'; // Assuming BlogList is a separate React component
+import BrutalPill from './BrutalPill';
 
 import BrutalCard from "@components/generic/MyCard";
 import BrutalButton from '@components/generic/MyButton';
@@ -95,7 +96,7 @@ const RecentBlogPosts = () => {
             {post.data.tags.map((tag) => (
               <li key={tag}> {/* Added key for better performance */}
                 <a className="sanchez" href={`/blog/tags/${tag.toLowerCase()}/`}>
-                  {/* <Pill>{tag}</Pill> */}
+                  <BrutalPill>{tag}</BrutalPill>
                 </a>
               </li>
             ))}
