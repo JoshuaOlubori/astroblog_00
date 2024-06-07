@@ -3,6 +3,8 @@ import sitemap from '@astrojs/sitemap';
 import UnoCSS from 'unocss/astro';
 import react from "@astrojs/react";
 
+import tailwind from "@astrojs/tailwind";
+
 // https://astro.build/config
 export default defineConfig({
   // used to generate images
@@ -10,7 +12,7 @@ export default defineConfig({
   trailingSlash: 'ignore',
   integrations: [sitemap(), UnoCSS({
     injectReset: true
-  }), react()],
+  }), react(), tailwind()],
   vite: {
     optimizeDeps: {
       exclude: ['@resvg/resvg-js']

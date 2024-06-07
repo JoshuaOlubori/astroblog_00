@@ -1,12 +1,17 @@
 ---
 import Layout from '@layouts/Default.astro';
-import RecentBlogPosts from '@components/generic/RecentBlogPosts.astro';
+// import RecentBlogPosts from '@components/generic/RecentBlogPosts';
+import RecentBlogPosts from '@components/generic/RecentBlogPosts';
 import MobileSocials from '@components/home/MobileSocials.astro';
 import { Hero } from '@components/home/DynamicText';
 import { Pill } from '@eliancodes/brutal-ui';
-import { Button } from '@eliancodes/brutal-ui';
-import { Card } from '@eliancodes/brutal-ui';
+import {Button} from '@eliancodes/brutal-ui';
+import {Card}  from '@eliancodes/brutal-ui';
+import { Image } from "astro:assets";
+import headshot from "../assets/profile.jpg";
 
+import BrutalCard from "@components/generic/MyCard";
+import BrutalButton from '@components/generic/MyButton';
 
 const builtWith = [
   { name: 'Astro', url: 'https://astro.build/' },
@@ -27,8 +32,8 @@ const builtWith = [
 
 <Layout
   title='Home'
-  pageTitle='Brutal Theme | Home'
-  description='Brutal is a minimalistic, neobrutalism theme for Astro.'
+  pageTitle=' Home'
+  description='My Portfolio Website'
 >
   <main class='bg-pink p-6'>
     <MobileSocials />
@@ -44,7 +49,16 @@ const builtWith = [
           </div>
         </Card>
       </div>
-      <div class='col-span-2'>
+
+      <Image
+		class="object-cover h-full w-full rounded-lg md:col-span-2 border-3 border-black card-shadow"
+		src={headshot}
+		alt="Elian Van Cutsem"
+		width={headshot.width}
+		height={headshot.height}
+	/>
+
+      <!-- <div class='col-span-2'>
         <Card>
           <h2 class='text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif'>
             Brutal is built with
@@ -68,21 +82,23 @@ const builtWith = [
             }
           </ul>
         </Card>
-      </div>
+      </div> -->
+
       <div class='col-span-2'>
         <Card>
           <h2 class='text-2xl md:text-4xl lg:text-6xl mb-4 dm-serif'>
-            What is Brutal?
+            Who am I?
           </h2>
           <p class='poppins'>
-            Brutal is a theme built with Astro, UnoCSS by <a
-              href='https://www.elian.codes/'>Elian</a
-            >. It's a simple, fast, and modern theme that is easy to use and
-            customize. Mainly meant to power blogs and personal websites.
+           Lorem ipsum dolor sit amet consectetur 
+           adipisicing elit. Et in tempora architecto nesciunt, voluptatibus nulla id quia nobis animi non. Molestias ipsum illum nisi culpa et voluptatibus voluptate, accusamus unde?
           </p>
         </Card>
       </div>
     </section>
-    <RecentBlogPosts />
+    <RecentBlogPosts client:load/>
+    <BrutalButton>Here </BrutalButton>
+    <BrutalCard><p>Here is</p></BrutalCard>
+
   </main>
 </Layout>

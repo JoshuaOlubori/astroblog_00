@@ -1,16 +1,9 @@
 
+// https://stackoverflow.com/questions/77870679/simple-typed-js-and-react-useeffect-not-running-in-astro-project
+
 import React from 'react';
 import Typed from 'typed.js';
 
-
-
-// <!-- <p class='mt-4 outfit text-2xl md:text-5xl lg:text-7xl'>
-//     <span class="">I'm a <span id="auto-type" class="text-white"></span></span>
-    
-//   </p>
-//   <p class='mt-2 outfit text-xl md:text-3xl lg:text-5xl'>
-//     Uncovering hidden patterns, driving informed decisions
-//   </p> -->
 
 
 

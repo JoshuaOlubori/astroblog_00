@@ -9,6 +9,7 @@ tags:
   - Vite
 imgUrl: '../../assets/astro.jpeg'
 layout: ../../layouts/BlogPost.astro
+category: App
 ---
 
 ## Deorum petiit ignis

@@ -9,6 +9,7 @@ tags:
   - Web Development
 imgUrl: '../../assets/astro.jpeg'
 layout: ../../layouts/BlogPost.astro
+category: Notebook
 ---
 
 ## Deorum petiit ignis
