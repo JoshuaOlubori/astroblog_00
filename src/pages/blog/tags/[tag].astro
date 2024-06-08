@@ -2,7 +2,7 @@
 import { getCollection } from 'astro:content';
 import type { CollectionEntry } from 'astro:content';
 import Layout from '@layouts/Default.astro';
-import BlogList from '@components/blog/BlogList';
+import BlogList from '@components/blog/BlogList.jsx';
 import { Button } from '@eliancodes/brutal-ui';
 
 export async function getStaticPaths() {
@@ -48,6 +48,6 @@ const { tag, blogposts } = Astro.props;
     <div>
       <Button href='/blog/'>&larr; Back to blog</Button>
     </div>
-    <BlogList posts={blogposts} />
+    <BlogList posts={blogposts}/>
   </main>
 </Layout>

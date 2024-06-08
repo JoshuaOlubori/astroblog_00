@@ -39,14 +39,8 @@ const RecentBlogPosts = () => {
   return (
     <section className="mt-8">
       <BrutalCard>
-        <div className="flex justify-between items-start">
-          <h2 className="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">Recent Blogposts</h2>
-          <div className="hidden md:block">
-            <BrutalButton href="/blog/">Go to blog &rarr;</BrutalButton>
-          </div>
-          <div className="block md:hidden">
-            <BrutalButton href="/blog/">to blog</BrutalButton>
-          </div>
+        <div className="text-center">
+          <h2 className="text-2xl md:text-4xl lg:text-6xl mb-8 dm-serif">Projects</h2>
         </div>
         <div className='flex justify-center space-x-4 mb-8'>
           {categories.map((category) => (

@@ -1,7 +1,7 @@
 import React from 'react';
-// import { Pill } from '@eliancodes/brutal-UI'; // Assuming Brutal UI components are accessible
+import Pill  from '../generic/BrutalPill.jsx'; // Assuming Brutal UI components are accessible
 // import Button from '@eliancodes/brutal-UI'; // Assuming Button is a separate component
-import SummaryCard from '../generic/SummaryCard'; // Assuming SummaryCard is a separate component
+import SummaryCard from '../generic/SummaryCard.jsx'; // Assuming SummaryCard is a separate component
 
 import BrutalButton from '@components/generic/MyButton';
 
@@ -24,7 +24,7 @@ const BlogSummaryCard = ({ post }) => {
             {post.data.tags.map((tag) => (
               <li key={tag}> {/* Added key for better performance */}
                 <a className="sanchez" href={`/blog/tags/${tag.toLowerCase()}/`}>
-                  {/* <Pill>{tag}</Pill> */}
+                  <Pill>{tag}</Pill>
                 </a>
               </li>
             ))}

@@ -12,6 +12,18 @@
   filter: drop-shadow(5px 5px 0 rgb(0 0 0 / 1));
 }
 
+
+/* .custom-sm-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (min-width: 450px) {
+  .custom-sm-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+} */
+
+
 :root 
 {  /* ---- ⚫️ Colors ⚪️ ---- */
   /* Base Tokens */

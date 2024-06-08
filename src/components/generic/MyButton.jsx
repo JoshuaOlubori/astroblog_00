@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import colors from './colors.json'; // Assuming colors.json is accessible
 
 const BrutalButton = ({ children, color = colors[Math.floor(Math.random() * colors.length)], ...rest }) => {
@@ -21,14 +21,24 @@ const BrutalButton = ({ children, color = colors[Math.floor(Math.random() * colo
 
   const [style, setStyle] = useState(buttonStyle);
 
-const onMouseOver = () => {
-  setStyle({ ...style, ...hoverStyle });
-};
+  const handleMouseOver = () => {
+    setStyle({ ...buttonStyle, ...hoverStyle });
+  };
+
+  const handleMouseOut = () => {
+    setStyle(buttonStyle);
+  };
 
   return (
-    <a {...rest} className="brutal-btn" style={buttonStyle} onMouseOver={onMouseOver}>
+    <button
+      {...rest}
+      className="brutal-btn"
+      style={style}
+      onMouseOver={handleMouseOver}
+      onMouseOut={handleMouseOut}
+    >
       {children}
-    </a>
+    </button>
   );
 };
 
