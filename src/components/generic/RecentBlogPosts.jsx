@@ -81,6 +81,7 @@ const RecentBlogPosts = () => {
 
       <div className="flex justify-end my-4">
         <BrutalButton href={`/blog/${post.slug}/`}>Read post &rarr;</BrutalButton>
+
       </div>
 
       <div className="hidden sm:inline-block">

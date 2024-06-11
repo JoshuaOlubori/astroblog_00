@@ -30,7 +30,7 @@ const BrutalButton = ({ children, color = colors[Math.floor(Math.random() * colo
   };
 
   return (
-    <button
+    <a
       {...rest}
       className="brutal-btn"
       style={style}
@@ -38,7 +38,7 @@ const BrutalButton = ({ children, color = colors[Math.floor(Math.random() * colo
       onMouseOut={handleMouseOut}
     >
       {children}
-    </button>
+    </a>
   );
 };
 
